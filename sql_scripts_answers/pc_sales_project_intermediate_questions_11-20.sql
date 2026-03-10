@@ -33,6 +33,26 @@ from pc_sales
 group by storage_type
 
 -- 17. Calculate total revenue per Shop Name.
+
+select shop_name sum(sale_price) as total_revenue
+from pc_sales
+group by shop_name
+
 -- 18. Calculate total revenue per Sales Person Name.
+
+select sales_person_name sum(sale_price) as total_revenue
+from pc_sales
+group by sales_person_name
+
 -- 19. Find average Credit Score per Payment Method.
+select * from pc_sales
+
+select Payment_Method avg(Credit_Score) as average_Credit_Score
+from pc_sales
+group by Payment_Method
+
 -- 20. Calculate total Cost of Repairs per Sales Person Department.
+
+select sales_person_department SUM(COST_OF_REPAIRS) as Total_Cost_of_repairs
+from pc_sales
+group by sales_person_department
